@@ -1,7 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-img {
+.pageContainer {
     width: 100%;
+    height: 100vh;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    .mymovieContainer {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(179, 73, 73);
+        background-size:cover;
+        color: white;
+        .introMymovie {
+            h1 {
+                width: 320px;
+                height: 50px;
+                padding-top: 5px;
+                border: 3px solid white;
+                cursor: default;
+            }
+            button {
+                font-size: 1rem;
+                font-family : inherit;
+                padding: 5px 10px;
+                background: rgb(179, 73, 73);
+                color: white;
+                cursor: pointer;
+                border: none;
+            }
+            button:hover {
+    
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3 {
+                    width: 90px;
+                    border: 2px solid white;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+    
+    .picbedContainer {
+        flex: 1;
+        background-color: rgb(111, 153, 201);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .introPicbed {
+            h1 {
+                font-size: 2.5rem;
+                color: #222222;
+            }
+        }
+    }
+}
+
+
+
+
+.slider {
+    width: 100%;
+    height: 500px;
+
+    .img {
+        width: 250px;
+        height: 250px;
+        background-image: url(http://localhost:5000/api/lover);
+        background-size:cover;
+    }
 }

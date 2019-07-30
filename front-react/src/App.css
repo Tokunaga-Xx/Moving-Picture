@@ -1,9 +1,104 @@
-* {
-  margin: 0;
-  padding: 0;
+.pageContainer {
+  width: 100%;
+  height: 100vh;
 }
 
-img {
+.introContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
+  height: 100vh;
+}
+
+.introContainer .mymovieContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #b34949;
+  background-size: cover;
+  color: white;
+}
+
+.introContainer .mymovieContainer .introMymovie h1 {
+  width: 320px;
+  height: 50px;
+  padding-top: 5px;
+  border: 3px solid white;
+  cursor: default;
+}
+
+.introContainer .mymovieContainer .introMymovie button {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 5px 10px;
+  background: #b34949;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.introContainer .mymovieContainer .introMymovie i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introContainer .mymovieContainer .introMymovie i h3 {
+  width: 90px;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.introContainer .picbedContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #6f99c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introContainer .picbedContainer .introPicbed h1 {
+  font-size: 2.5rem;
+  color: #222222;
+}
+
+.slider {
+  width: 100%;
+  height: 500px;
+}
+
+.slider .img {
+  width: 250px;
+  height: 250px;
+  background-image: url(http://localhost:5000/api/lover);
+  background-size: cover;
 }
 /*# sourceMappingURL=App.css.map */

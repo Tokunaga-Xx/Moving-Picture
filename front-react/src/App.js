@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
+
+import IntroPage from './components/intro/intro';
+
 import './App.css';
 
-function App() {
-  fetch('http://localhost:5000/api/lover/THjapan.jpg')
-  .then(response => console.log(response)).then((data) => console.log(data)
-  )
-  return (
-    <div>
-      <h1>test</h1>
-      <img src="" alt=""/>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className={'pageContainer'}>
+        <IntroPage />
+      </div>
+    );
+  }
 }
-
 export default App;
