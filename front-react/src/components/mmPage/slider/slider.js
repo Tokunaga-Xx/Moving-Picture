@@ -1,14 +1,24 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
+
 import 'react-id-swiper/lib/styles/css/swiper.css';
 
 
 const CoverflowEffect = () => {
     const params = {
+      initialSlide :2,
       effect: 'coverflow',
-      grabCursor: false,
       centeredSlides: true,
-      slidesPerView: 'auto',
+      slidesPerView: 2,
+      keyboard : true,
+      mousewheel: true,
+      loop : true,
+      autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+
+      },
       coverflowEffect: {
         rotate: 35,
         stretch: 0,
@@ -17,12 +27,18 @@ const CoverflowEffect = () => {
         slideShadows: true
       },
       pagination: {
-        el: '.swiper-pagination'
-      }
+        el: '.swiper-pagination',
+        clickable :true,
+
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     }
     return (
       <div className="slider">
-        <Swiper {...params}>
+        <Swiper {...params} >
           <div className={'img'} />
           <div className={'img'}/>
           <div className={'img'}/>

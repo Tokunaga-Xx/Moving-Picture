@@ -9,7 +9,7 @@ app.use(logger);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/lover', require('./route/api/lover'));
+app.use('/api/picture', require('./route/api/picture'));
 
 const PORT = process.env.PORT || 5000;
 

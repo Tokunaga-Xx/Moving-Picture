@@ -30,14 +30,14 @@
           align-items: center;
   background-color: #b34949;
   background-size: cover;
-  color: white;
+  color: #ffffff;
 }
 
 .introContainer .mymovieContainer .introMymovie h1 {
   width: 320px;
   height: 50px;
   padding-top: 5px;
-  border: 3px solid white;
+  border: 3px solid #ffffff;
   cursor: default;
 }
 
@@ -45,10 +45,16 @@
   font-size: 1rem;
   font-family: inherit;
   padding: 5px 10px;
-  background: #b34949;
-  color: white;
+  background-color: #b34949;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+  color: #ffffff;
   cursor: pointer;
   border: none;
+}
+
+.introContainer .mymovieContainer .introMymovie button:hover {
+  background-color: #222222;
 }
 
 .introContainer .mymovieContainer .introMymovie i {
@@ -63,17 +69,33 @@
           align-items: center;
 }
 
-.introContainer .mymovieContainer .introMymovie i h3 {
+.introContainer .mymovieContainer .introMymovie i a {
+  text-decoration: none;
+}
+
+.introContainer .mymovieContainer .introMymovie i a h3 {
   width: 90px;
-  border: 2px solid white;
+  border: 2px solid #ffffff;
   border-radius: 15px;
+}
+
+.introContainer .mymovieContainer .introMymovie i a:link {
+  color: #ffffff;
+}
+
+.introContainer .mymovieContainer .introMymovie i a:visited {
+  color: #ffffff;
+}
+
+.introContainer .mymovieContainer .introMymovie i a:active {
+  color: #ffffff;
 }
 
 .introContainer .picbedContainer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #6f99c9;
+  background-color: #96c5fa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +108,60 @@
 }
 
 .introContainer .picbedContainer .introPicbed h1 {
-  font-size: 2.5rem;
+  width: 320px;
+  height: 50px;
+  padding-top: 5px;
+  border: 3px solid #222222;
+  cursor: default;
+}
+
+.introContainer .picbedContainer .introPicbed button {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 5px 10px;
+  background-color: #96c5fa;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+  color: #222222;
+  cursor: pointer;
+  border: none;
+}
+
+.introContainer .picbedContainer .introPicbed button:hover {
+  background-color: #ffffff;
+}
+
+.introContainer .picbedContainer .introPicbed i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introContainer .picbedContainer .introPicbed i a {
+  text-decoration: none;
+}
+
+.introContainer .picbedContainer .introPicbed i a h3 {
+  width: 90px;
+  border: 2px solid #222222;
+  border-radius: 15px;
+}
+
+.introContainer .picbedContainer .introPicbed i a:link {
+  color: #222222;
+}
+
+.introContainer .picbedContainer .introPicbed i a:visited {
+  color: #222222;
+}
+
+.introContainer .picbedContainer .introPicbed i a:active {
   color: #222222;
 }
 
@@ -96,9 +171,8 @@
 }
 
 .slider .img {
-  width: 250px;
-  height: 250px;
-  background-image: url(http://localhost:5000/api/lover);
+  height: 500px;
+  background-color: #222222;
   background-size: cover;
 }
 /*# sourceMappingURL=App.css.map */
