@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
 
 
 class introPicbed extends Component {
@@ -8,9 +7,7 @@ class introPicbed extends Component {
         return (
             <div className="introPicbed">
                 <h1>My-image-host</h1>
-                <Link to="/imagehost">
-                    <button>Log in</button>
-                </Link>
+                <a href="https://douban.com"><button>Log in</button></a>
                 <i><a href="https://github.com/Tokunaga-X/Moving-Picture"><h3>github</h3></a></i>
             </div>
         );

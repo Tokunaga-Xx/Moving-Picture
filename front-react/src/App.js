@@ -15,7 +15,6 @@ class App extends Component {
       <div className={'pageContainer'}>
         <Route path="/" exact component={IntroPage} />
         <Route path="/mymovie" component={mmPage} />
-        <Route path="/imagehost" component={pbPage} />
       </div>
       </Router>
     );

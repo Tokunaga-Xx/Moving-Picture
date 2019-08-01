@@ -4,7 +4,10 @@ class pbLogin extends Component {
     render() {
         return (
             <div className="pbLogin">
-                <h1>Login here</h1>
+                <form method="post" action="upload/post" enctype="multipart/form-data">
+                    <input type="file" name="image" />
+                    <button type="submit" name="upload">Upload</button>
+                </form>
             </div>
         );
     }

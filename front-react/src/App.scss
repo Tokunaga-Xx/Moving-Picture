@@ -38,7 +38,7 @@ $colors: (
                 font-family : inherit;
                 padding: 5px 10px;
                 background-color: rgb(179, 73, 73);
-                transition: background-color 2s;
+                transition: background-color 1s;
                 color: map-get($colors, movie);
                 cursor: pointer;
                 border: none; 
@@ -90,7 +90,7 @@ $colors: (
                 font-family : inherit;
                 padding: 5px 10px;
                 background-color: rgb(150, 197, 250);
-                transition: background-color 2s;
+                transition: background-color 1s;
                 color: map-get($colors, picbed);
                 cursor: pointer;
                 border: none;
@@ -99,7 +99,6 @@ $colors: (
                 background-color: map-get($colors, movie);
             }
             i {
-                
                 display: flex;
                 justify-content: center;
                 align-items: center;
