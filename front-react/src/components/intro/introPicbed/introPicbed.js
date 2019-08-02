@@ -7,7 +7,7 @@ class introPicbed extends Component {
         return (
             <div className="introPicbed">
                 <h1>My-image-host</h1>
-                <a href="https://douban.com"><button>Log in</button></a>
+                <a href="http://localhost:5000"><button>Log in</button></a>
                 <i><a href="https://github.com/Tokunaga-X/Moving-Picture"><h3>github</h3></a></i>
             </div>
         );
