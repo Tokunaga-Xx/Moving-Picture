@@ -46,8 +46,8 @@
   font-family: inherit;
   padding: 5px 10px;
   background-color: #b34949;
-  -webkit-transition: background-color 2s;
-  transition: background-color 2s;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
   color: #ffffff;
   cursor: pointer;
   border: none;
@@ -120,8 +120,8 @@
   font-family: inherit;
   padding: 5px 10px;
   background-color: #96c5fa;
-  -webkit-transition: background-color 2s;
-  transition: background-color 2s;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
   color: #222222;
   cursor: pointer;
   border: none;
@@ -171,8 +171,9 @@
 }
 
 .slider .img {
-  height: 500px;
-  background-color: #222222;
+  height: 50vh;
+  background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/about-Me.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=App.css.map */

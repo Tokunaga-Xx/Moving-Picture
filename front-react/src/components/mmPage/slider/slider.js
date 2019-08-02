@@ -39,11 +39,15 @@ const CoverflowEffect = () => {
     return (
       <div className="slider">
         <Swiper {...params} >
-          <div className={'img'} />
-          <div className={'img'}/>
-          <div className={'img'}/>
-          <div className={'img'}/>
-          <div className={'img'}/>
+          <div className={'img'}>
+            
+          </div>
+          <div className={'img'}>
+            
+          </div>
+          <div className={'img'}>
+            
+          </div>
         </Swiper>
       </div>
     )

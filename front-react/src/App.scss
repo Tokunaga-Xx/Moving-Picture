@@ -124,17 +124,14 @@ $colors: (
     }
 }
 
-
-
-
 .slider {
     width: 100%;
     height: 500px;
     .img {
-
-        height: 500px;
-        // background-image: url(http://localhost:5000/api/picture);
-        background-color: map-get($colors, picbed);
-        background-size:cover;
+        height: 50vh;
+        background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/about-Me.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
+
