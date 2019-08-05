@@ -167,13 +167,61 @@
 
 .slider {
   width: 100%;
-  height: 500px;
+  height: 50vh;
 }
 
 .slider .img {
+  width: 'auto';
   height: 50vh;
-  background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/about-Me.jpg);
+  background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/HelloBlog.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vertical-slider {
+  margin: 20px;
+  width: 100%;
+}
+
+.vertical-slider .img {
+  width: 100%;
+  height: 45vh;
+  background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/HelloBlog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Artical {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Artical .swiperArea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Artical .wordArea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Artical .wordArea .right ul {
+  width: 100%;
+  list-style: none;
+}
+
+.Artical .wordArea .right ul li {
+  width: 100%;
+  height: 45vh;
+  background: #222222;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=App.css.map */

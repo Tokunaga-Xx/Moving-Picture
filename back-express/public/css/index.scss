@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+}
+
+.msg {
+    img {
+        width: 50%;
+
+    }
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    justify-content: stretch;
+    align-items: stretch;
+    .imgArea {
+        width: 33%;
+        height: 33%;
+        background-image: url(https://github.com/Tokunaga-X/Tokunaga-X.github.io/blob/master/img/about-Me.jpg?raw=true);
+        background-size: cover;
+    }
+}

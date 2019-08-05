@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.msg img {
+  width: 50%;
+}
+
+.gridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.gridContainer .imgArea {
+  width: 33%;
+  height: 33%;
+  background-image: url(https://github.com/Tokunaga-X/Tokunaga-X.github.io/blob/master/img/about-Me.jpg?raw=true);
+  background-size: cover;
+}
+/*# sourceMappingURL=index.css.map */

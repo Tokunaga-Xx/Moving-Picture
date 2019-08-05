@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 
 import IntroPage from './components/intro/intro';
 import mmPage from './components/mmPage/mmPage';
-import pbPage from './components/picbedPage/pbLogin';
 import './App.css';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router,  Route } from 'react-router-dom';
 
 
 class App extends Component {

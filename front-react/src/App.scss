@@ -126,12 +126,53 @@ $colors: (
 
 .slider {
     width: 100%;
-    height: 500px;
+    height: 50vh;
     .img {
+        width: 'auto';
         height: 50vh;
-        background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/about-Me.jpg);
+        background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/HelloBlog.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.vertical-slider {
+    margin: 20px;
+    width: 100%;
+    .img {
+        
+        width: 100%;
+        height: 45vh;
+        background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/HelloBlog.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.Artical {
+    width: 100%;
+    display: flex;
+    .swiperArea {
+        flex: 1;
+        
+    }
+    .wordArea {
+        flex: 1;
+        .right {
+            ul {
+                width: 100%;
+                list-style: none;
+                li {
+                    width: 100%;
+                    height: 45vh;
+                    background: #222222;
+                    margin-bottom: 30px;
+                    color: #ffffff;
+                }
+            }
+        }
     }
 }
 

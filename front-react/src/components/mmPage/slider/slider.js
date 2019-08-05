@@ -20,7 +20,7 @@ const CoverflowEffect = () => {
 
       },
       coverflowEffect: {
-        rotate: 35,
+        rotate: 10,
         stretch: 0,
         depth: 100,
         modifier: 1,
@@ -36,6 +36,9 @@ const CoverflowEffect = () => {
         prevEl: '.swiper-button-prev',
       },
     }
+
+
+    
     return (
       <div className="slider">
         <Swiper {...params} >
@@ -53,4 +56,6 @@ const CoverflowEffect = () => {
     )
     
   };
+
+
   export default CoverflowEffect;

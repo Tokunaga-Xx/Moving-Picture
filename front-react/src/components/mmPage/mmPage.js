@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Nav from './Nav/Nav';
 import Slider from './Slider/Slider';
+import MovieComment from './Artical/Artical';
+import Footer from './Footer/Footer';
 
 class mmPage extends Component {
     render() {
@@ -8,6 +10,8 @@ class mmPage extends Component {
             <div className="mmPage">
                 <Nav />
                 <Slider />
+                <MovieComment />
+                <Footer />
             </div>
         );
     }
