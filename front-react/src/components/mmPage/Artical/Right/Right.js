@@ -6,10 +6,18 @@ class Right extends Component {
         return (
             <div className={"right"}>
                 <ul>
-                    <li>Comment Here</li>
-                    <li>Comment Here</li>
-                    <li>Comment Here</li>
-                    <li>Comment Here</li>
+                    <li>
+                        <a href="/posts/post1">post1</a>
+                    </li>
+                    <li>
+                        <a href="/posts/post1">post2</a>
+                    </li>
+                    <li>
+                        <a href="/posts/post1">post3</a>
+                    </li>
+                    <li>
+                        <a href="/posts/post1">post4</a>
+                    </li>
                 </ul>
             </div>
         );

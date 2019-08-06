@@ -137,42 +137,45 @@ $colors: (
     }
 }
 
-.vertical-slider {
-    margin: 20px;
-    width: 100%;
-    .img {
-        
-        width: 100%;
-        height: 45vh;
-        background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/HelloBlog.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
 
 .Artical {
     width: 100%;
     display: flex;
     .swiperArea {
         flex: 1;
-        
+        .vertical-slider {
+            margin: 20px;
+            width: 90%;
+            .img {
+                width: 100%;
+                height: 45vh;
+                background-image: url(https://raw.githubusercontent.com/Tokunaga-X/Tokunaga-X.github.io/master/img/HelloBlog.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
     }
     .wordArea {
         flex: 1;
         .right {
+            margin: 10px;
             ul {
-                width: 100%;
                 list-style: none;
                 li {
-                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
                     height: 45vh;
+                    margin-bottom: 32px;
                     background: #222222;
-                    margin-bottom: 30px;
                     color: #ffffff;
                 }
             }
         }
     }
 }
-
