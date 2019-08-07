@@ -7,6 +7,8 @@
     <title>Image-Host</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lightbox.min.css">
+    <script src="./lightbox-plus-jquery.min.js"></script>
 </head>
 <body>
     <nav class="text-center navbar-light bg-light">
@@ -47,17 +49,31 @@
     </div>
 
     <div class="gridContainer">
-        <div class="imgArea"></div>
-        <div class="imgArea"></div>
-        <div class="imgArea"></div>
-        <div class="imgArea"></div>
-        <div class="imgArea"></div>
-        <div class="imgArea"></div>
-    </div>
 
+        <ul class="ul">
+            <li>
+                <a href="http://localhost:5000/api/picture/tag-1565163718758" data-lightbox="mygallery">
+                    <img src="http://localhost:5000/api/picture/tag-1565163718758" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:5000/api/picture/her-1564740968800" data-lightbox="mygallery">
+                    <img src="http://localhost:5000/api/picture/her-1564740968800" alt="">
+                </a>
+            </li>            
+            <li><img src="http://localhost:5000/api/picture/tag-1565163718758" alt=""></li>
+            <li><img src="http://localhost:5000/api/picture/her-1564740968800" alt=""></li>
+            <li><img src="http://localhost:5000/api/picture/tag-1565163718758" alt=""></li>
+            <li><img src="http://localhost:5000/api/picture/her-1564740968800" alt=""></li>
+            <li><img src="http://localhost:5000/api/picture/tag-1565163718758" alt=""></li>
+
+        </ul>
+    </div>
+    
     <!-- Optional -->
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

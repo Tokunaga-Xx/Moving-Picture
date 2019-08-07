@@ -26,6 +26,7 @@ $colors: (
         background-size:cover;
         color: map-get($colors, movie);
         .introMymovie {
+            z-index: 2;
             h1 {
                 width: 320px;
                 height: 50px;
@@ -34,6 +35,8 @@ $colors: (
                 cursor: default;
             }
             button {
+                z-index: 2;
+                margin-top: 70px;
                 font-size: 1rem;
                 font-family : inherit;
                 padding: 5px 10px;
@@ -47,9 +50,14 @@ $colors: (
                 background-color: map-get($colors, picbed);
             }
             i {
+                position: absolute;
+                top: 80%;
+                left: 25%;
+                transform: translate(-50%,-50%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                
                 a {
                     text-decoration: none;
                     h3 {
@@ -78,6 +86,7 @@ $colors: (
         justify-content: center;
         align-items: center;
         .introPicbed {
+            z-index: 2;
             h1 {
                 width: 320px;
                 height: 50px;
@@ -86,6 +95,7 @@ $colors: (
                 cursor: default;
             }
             button {
+                margin-top: 70px;
                 font-size: 1rem;
                 font-family : inherit;
                 padding: 5px 10px;
@@ -99,6 +109,10 @@ $colors: (
                 background-color: map-get($colors, movie);
             }
             i {
+                position: absolute;
+                top: 80%;
+                left: 75%;
+                transform: translate(-50%,-50%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -121,6 +135,15 @@ $colors: (
                 }
             }
         }
+    }
+    .animationContainer {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
     }
 }
 
@@ -179,3 +202,20 @@ $colors: (
         }
     }
 }
+
+
+
+@keyframes runningFrames {
+    0% {
+      transform: translateX(350%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  

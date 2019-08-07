@@ -33,6 +33,10 @@
   color: #ffffff;
 }
 
+.introContainer .mymovieContainer .introMymovie {
+  z-index: 2;
+}
+
 .introContainer .mymovieContainer .introMymovie h1 {
   width: 320px;
   height: 50px;
@@ -42,6 +46,8 @@
 }
 
 .introContainer .mymovieContainer .introMymovie button {
+  z-index: 2;
+  margin-top: 70px;
   font-size: 1rem;
   font-family: inherit;
   padding: 5px 10px;
@@ -58,6 +64,11 @@
 }
 
 .introContainer .mymovieContainer .introMymovie i {
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,6 +118,10 @@
           align-items: center;
 }
 
+.introContainer .picbedContainer .introPicbed {
+  z-index: 2;
+}
+
 .introContainer .picbedContainer .introPicbed h1 {
   width: 320px;
   height: 50px;
@@ -116,6 +131,7 @@
 }
 
 .introContainer .picbedContainer .introPicbed button {
+  margin-top: 70px;
   font-size: 1rem;
   font-family: inherit;
   padding: 5px 10px;
@@ -132,6 +148,11 @@
 }
 
 .introContainer .picbedContainer .introPicbed i {
+  position: absolute;
+  top: 80%;
+  left: 75%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,6 +184,17 @@
 
 .introContainer .picbedContainer .introPicbed i a:active {
   color: #222222;
+}
+
+.introContainer .animationContainer {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .slider {
@@ -239,5 +271,37 @@
 .Artical .wordArea .right ul li a {
   text-decoration: none;
   color: white;
+}
+
+@-webkit-keyframes runningFrames {
+  0% {
+    -webkit-transform: translateX(350%);
+            transform: translateX(350%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes runningFrames {
+  0% {
+    -webkit-transform: translateX(350%);
+            transform: translateX(350%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=App.css.map */
