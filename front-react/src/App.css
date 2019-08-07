@@ -273,6 +273,80 @@
   color: white;
 }
 
+.mmPage .nav {
+  margin: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.mmPage .nav h1 {
+  cursor: default;
+}
+
+.mmPage .nav h1 span {
+  color: crimson;
+}
+
+.mmPage .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.mmPage .nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 1px;
+  position: relative;
+  margin: 0 3rem;
+  padding: 5px 0;
+}
+
+.mmPage .nav ul li a:last-child {
+  margin-right: 40px;
+}
+
+.mmPage .nav ul li a::before,
+.mmPage .nav ul li a::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: crimson;
+  left: 0;
+  position: absolute;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.mmPage .nav ul li a::before {
+  top: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.mmPage .nav ul li a::after {
+  bottom: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.mmPage .nav ul li a:hover::before,
+.mmPage .nav ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 @-webkit-keyframes runningFrames {
   0% {
     -webkit-transform: translateX(350%);
