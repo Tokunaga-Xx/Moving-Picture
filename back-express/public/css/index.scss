@@ -19,14 +19,13 @@
     justify-content: stretch;
     align-items: stretch;
     ul {
-        width: 100%;
-        background: lavender;
         list-style: none;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1em;
     }
     li {
+        
         img {
             width: 100%;
         }

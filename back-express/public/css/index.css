@@ -20,8 +20,6 @@
 }
 
 .gridContainer ul {
-  width: 100%;
-  background: lavender;
   list-style: none;
   display: -ms-grid;
   display: grid;

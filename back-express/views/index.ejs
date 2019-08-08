@@ -49,24 +49,31 @@
     </div>
 
     <div class="gridContainer">
+        <h1 class="text-center ">Here is all the pics:</h1>
+        <ul class="ul" id="ul">
+            <script>
+                    fetch('http://localhost:5000/api/picture/all')
+                    .then((res) => {
+                        return res.text();
+                    })
+                    .then((data) => {
+                        JSON.parse(data).forEach((name) => {
+                            let li = document.createElement('li');
+                            let a = document.createElement('a');
+                            a.href=`http://localhost:5000/api/picture/one/${name}`;
+                            a.setAttribute('data-lightbox','mygallery');
+                            let img = document.createElement('img');
+                            img.setAttribute('src',`http://localhost:5000/api/picture/one/${name}`);
+                            a.appendChild(img);
+                            li.appendChild(a);
+                            document.getElementById('ul').appendChild(li);
+                            console.log(name);
+                        })
+                    });
 
-        <ul class="ul">
-            <li>
-                <a href="http://localhost:5000/api/picture/tag-1565163718758" data-lightbox="mygallery">
-                    <img src="http://localhost:5000/api/picture/tag-1565163718758" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:5000/api/picture/her-1564740968800" data-lightbox="mygallery">
-                    <img src="http://localhost:5000/api/picture/her-1564740968800" alt="">
-                </a>
-            </li>            
-            <li><img src="http://localhost:5000/api/picture/tag-1565163718758" alt=""></li>
-            <li><img src="http://localhost:5000/api/picture/her-1564740968800" alt=""></li>
-            <li><img src="http://localhost:5000/api/picture/tag-1565163718758" alt=""></li>
-            <li><img src="http://localhost:5000/api/picture/her-1564740968800" alt=""></li>
-            <li><img src="http://localhost:5000/api/picture/tag-1565163718758" alt=""></li>
-
+            </script>    
+            <script>
+            </script>
         </ul>
     </div>
     

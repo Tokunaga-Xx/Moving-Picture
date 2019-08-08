@@ -46,7 +46,7 @@ app.post('/upload',(req, res) => {
                     status: 'success',
                     msg: 'File Uploaded!',
                     msg2: 'Here is what u uploaded:',
-                    file: `upload/${req.file.filename}`
+                    file: `upload/${req.file.filename}`,
                 });
             }
         }
