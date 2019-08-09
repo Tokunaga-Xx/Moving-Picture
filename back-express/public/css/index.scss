@@ -1,33 +1,32 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 .msg {
-    img {
-        width: 50%;
-
-    }
+  img {
+    width: 50%;
+  }
 }
 
-
-
 .gridContainer {
-    width: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: stretch;
+  align-items: stretch;
+  ul {
+    margin: 0.5em;
+    list-style: none;
     display: grid;
-    justify-content: stretch;
-    align-items: stretch;
-    ul {
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5em;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    img {
+      width: 100%;
     }
-    li {
-        
-        img {
-            width: 100%;
-        }
-    }
+  }
 }
