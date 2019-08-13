@@ -3,8 +3,33 @@
   padding: 0;
 }
 
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  background: white;
+}
+
+nav {
+  background-color: lightblue;
+}
+
+nav img {
+  width: 12%;
+}
+
 .msg img {
   width: 50%;
+}
+
+.form {
+  margin-top: 15vh;
 }
 
 .gridContainer {
@@ -20,13 +45,12 @@
 }
 
 .gridContainer ul {
-  margin: 0.5em;
   list-style: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.5em;
+  grid-gap: 1em;
 }
 
 .gridContainer li {

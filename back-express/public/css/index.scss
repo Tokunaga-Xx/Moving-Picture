@@ -2,11 +2,39 @@
   margin: 0;
   padding: 0;
 }
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  background: white;
+}
+
+nav {
+  background-color: lightblue;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  // height: 25vh;
+  img {
+    width: 12%;
+  }
+}
 
 .msg {
   img {
     width: 50%;
   }
+}
+
+.form {
+  margin-top: 15vh;
 }
 
 .gridContainer {
@@ -15,11 +43,10 @@
   justify-content: stretch;
   align-items: stretch;
   ul {
-    margin: 0.5em;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5em;
+    grid-gap: 1em;
   }
   li {
     display: flex;
