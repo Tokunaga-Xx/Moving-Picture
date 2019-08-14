@@ -37,7 +37,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #b34949;
+  background-image: url(./images/cinema-1241422_1920.jpg);
+  background-position: center;
+  background-size: cover;
   color: #ffffff;
 }
 
@@ -68,7 +70,7 @@
   margin-top: 70px;
   font-size: 1.5em;
   font-family: inherit;
-  background-color: #b34949;
+  background-color: rgba(0, 73, 73, 0.3);
   color: #ffffff;
   cursor: pointer;
   border: none;
@@ -120,11 +122,26 @@
           animation: simpleBtnchange 500ms ease-in-out;
 }
 
+.introContainer .mymovieContainer::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(220, 20, 60, 0.5);
+  -webkit-box-shadow: inset 70px 70px 100px #222222, inset -100px -70px 100px #222222;
+          box-shadow: inset 70px 70px 100px #222222, inset -100px -70px 100px #222222;
+}
+
 .introContainer .picbedContainer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #96c5fa;
+  background-image: url(./images/poster-mockup-2853835_1920.jpg);
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +180,7 @@
   margin-top: 70px;
   font-size: 1.5em;
   font-family: inherit;
-  background-color: #96c5fa;
+  background-color: rgba(161, 228, 228, 0.3);
   -webkit-transition: background-color 1s;
   transition: background-color 1s;
   color: #222222;
@@ -213,6 +230,19 @@
 .introContainer .picbedContainer .introPicbed i img:hover {
   -webkit-animation: simpleBtnchange 500ms ease-in-out;
           animation: simpleBtnchange 500ms ease-in-out;
+}
+
+.introContainer .picbedContainer::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(158, 209, 216, 0.3);
+  -webkit-box-shadow: inset 100px 70px 100px #222222, inset -70px -70px 100px #222222;
+          box-shadow: inset 100px 70px 100px #222222, inset -70px -70px 100px #222222;
 }
 
 .introContainer .animationContainer {

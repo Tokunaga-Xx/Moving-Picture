@@ -1,19 +1,22 @@
 const express = require("express");
 const router = express.Router();
+const path = require("path");
+
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const User = require("../modules/User");
-const path = require("path");
+const { forwardAuthenticated } = require("../config/auth");
 
 router.use(express.static(path.join(__dirname, "..", "public")));
 
-router.get("/login", (req, res) => res.render("login"));
+router.get("/login", forwardAuthenticated, (req, res) => res.render("login"));
 
 // Login Handle
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", {
     successRedirect: "/owner",
-    failureRedirect: "/"
+    failureRedirect: "/users/login",
+    failureFlash: true
   })(req, res, next);
 });
 

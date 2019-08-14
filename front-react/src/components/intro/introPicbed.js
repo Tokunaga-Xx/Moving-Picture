@@ -5,7 +5,7 @@ class introPicbed extends Component {
   render() {
     return (
       <div className="introPicbed">
-        <h1>My-image-host</h1>
+        <h1>Image-host</h1>
         <a href="http://localhost:5000">
           <button>Log in</button>
         </a>

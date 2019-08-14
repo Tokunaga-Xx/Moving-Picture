@@ -21,8 +21,10 @@ $colors: (
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(179, 73, 73);
-
+    // background-color: rgb(179, 73, 73);
+    background-image: url(./images/cinema-1241422_1920.jpg);
+    background-position: center;
+    background-size: cover;
     color: map-get($colors, movie);
     .introMymovie {
       z-index: 2;
@@ -50,7 +52,7 @@ $colors: (
         }
         font-size: 1.5em;
         font-family: inherit;
-        background-color: rgb(179, 73, 73);
+        background-color: rgba(0, 73, 73, 0.3);
         color: map-get($colors, movie);
         cursor: pointer;
         border: none;
@@ -75,10 +77,24 @@ $colors: (
       }
     }
   }
+  .mymovieContainer::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(220, 20, 60, 0.5);
+    box-shadow: inset 70px 70px 100px #222222, inset -100px -70px 100px #222222;
+  }
 
   .picbedContainer {
     flex: 1;
-    background-color: rgb(150, 197, 250);
+    // background-color: rgb(150, 197, 250);
+    background-image: url(./images/poster-mockup-2853835_1920.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +124,7 @@ $colors: (
         }
         font-size: 1.5em;
         font-family: inherit;
-        background-color: rgb(150, 197, 250);
+        background-color: rgba(161, 228, 228, 0.3);
         transition: background-color 1s;
         color: map-get($colors, picbed);
         cursor: pointer;
@@ -133,6 +149,18 @@ $colors: (
       }
     }
   }
+  .picbedContainer::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: rgba(158, 209, 216, 0.3);
+    box-shadow: inset 100px 70px 100px #222222, inset -70px -70px 100px #222222;
+  }
+
   .animationContainer {
     z-index: 1;
     position: absolute;

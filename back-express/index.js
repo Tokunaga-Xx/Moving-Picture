@@ -5,6 +5,8 @@ const expressLayouts = require("express-ejs-layouts");
 const multer = require("multer");
 const mongoose = require("mongoose");
 const passport = require("passport");
+const flash = require("connect-flash");
+const session = require("express-session");
 
 const app = express();
 
@@ -28,13 +30,33 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Init middleware
+// Passport middleware
 app.use(logger);
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Express session
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// Connect flash
+app.use(flash());
+
 // Public Folder
 app.use(express.static(path.join(__dirname, "public")));
+
+// Global variables
+app.use(function(req, res, next) {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
+  next();
+});
 
 // Set Storage Engine
 const storage = multer.diskStorage({

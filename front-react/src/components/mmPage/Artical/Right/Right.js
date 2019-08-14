@@ -12,10 +12,10 @@ class Right extends Component {
             <a href="/post/2">post2</a>
           </li>
           <li>
-            <a href="#">To be filled</a>
+            <a href="/post/1">To be filled</a>
           </li>
           <li>
-            <a href="#">To be filled</a>
+            <a href="/post/1">To be filled</a>
           </li>
         </ul>
       </div>
