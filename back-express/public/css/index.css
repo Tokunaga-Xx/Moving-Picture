@@ -34,6 +34,7 @@ nav img {
 
 .gridContainer {
   width: 100%;
+  margin-top: 10vh;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: stretch;

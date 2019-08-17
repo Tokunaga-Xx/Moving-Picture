@@ -9,7 +9,7 @@ const { forwardAuthenticated } = require("../config/auth");
 
 router.use(express.static(path.join(__dirname, "..", "public")));
 
-router.get("/login", forwardAuthenticated, (req, res) => res.render("login"));
+router.get("/login", (req, res) => res.render("login"));
 
 // Login Handle
 router.post("/login", (req, res, next) => {
