@@ -91,7 +91,7 @@ $colors: (
     width: 50%;
     height: 100%;
     background: rgba(220, 20, 60, 0.5);
-    box-shadow: inset 40px 40px 100px #222222, inset -70px -40px 100px #222222;
+    box-shadow: inset 5px 5px 50px #222222, inset -30px -5px 50px #222222;
   }
 
   .picbedContainer {
@@ -129,7 +129,7 @@ $colors: (
         }
         font-size: 1.5em;
         font-family: inherit;
-        background-color: rgba(161, 228, 228, 0.3);
+        background-color: rgba(158, 209, 216, 0.3);
         transition: background-color 1s;
         color: map-get($colors, picbed);
         cursor: pointer;
@@ -163,7 +163,7 @@ $colors: (
     width: 50%;
     height: 100%;
     background: rgba(158, 209, 216, 0.3);
-    box-shadow: inset 70px 40px 100px #222222, inset -40px -40px 100px #222222;
+    box-shadow: inset 30px 5px 50px #222222, inset -5px -5px 10px #222222;
   }
 
   .animationContainer {
@@ -188,10 +188,12 @@ $colors: (
 
 .nav {
   margin: 2rem 4rem;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  // background: #222222;
   h1 {
     cursor: default;
     span {
@@ -280,10 +282,61 @@ $colors: (
   }
 }
 
+.postPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  h1 {
+    color: crimson;
+    margin: 1em;
+  }
+  h3 {
+    color: rgb(66, 160, 223);
+    margin: 1em;
+  }
+  .markdown {
+    width: 60%;
+    line-height: 2rem;
+  }
+}
+
+.postlist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .list {
+    ul {
+      width: 100%;
+      height: auto;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 1em;
+      justify-content: center;
+      align-items: center;
+      li {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .headarea {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
 footer {
   background: #222222;
   color: #ffffff;
-  height: 20vh;
+  height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;

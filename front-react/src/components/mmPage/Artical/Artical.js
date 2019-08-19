@@ -10,10 +10,12 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/HelloBlog-1565246545718.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
               <p>Lorem ipsum dolor sit.</p>
+              <a href="/post1">here</a>
             </div>
           </li>
           <li>
@@ -21,6 +23,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
@@ -32,6 +35,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/HelloBlog-1565246545718.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
@@ -43,6 +47,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
@@ -54,6 +59,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/HelloBlog-1565246545718.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
@@ -65,6 +71,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
@@ -76,6 +83,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/HelloBlog-1565246545718.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">
@@ -87,6 +95,7 @@ class Artical extends Component {
               <img
                 data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
                 alt=""
+                className="img"
               />
             </div>
             <div className="postArea">

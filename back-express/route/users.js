@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const passport = require("passport");
 const User = require("../modules/User");
-const { forwardAuthenticated } = require("../config/auth");
+// const { forwardAuthenticated } = require("../config/auth");
 
 router.use(express.static(path.join(__dirname, "..", "public")));
 
@@ -28,7 +28,7 @@ router.post("/login", (req, res, next) => {
 // bcrypt.genSalt(10, (err, salt) =>
 //   bcrypt.hash(newUser.password, salt, (err, hash) => {
 //     if (err) throw err;
-//     newUser.password = hash;
+//     // newUser.password = hash;
 
 //     newUser
 //       .save()

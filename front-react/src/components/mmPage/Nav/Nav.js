@@ -9,7 +9,7 @@ class Nav extends Component {
         </h1>
         <ul>
           <li>
-            <a href="/">home</a>
+            <a href="/page">home</a>
           </li>
           <li>
             <a href="/postlist">posts</a>

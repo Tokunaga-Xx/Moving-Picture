@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import douban from "../../images/douban.png";
 
 class introMymovie extends Component {
@@ -7,9 +6,9 @@ class introMymovie extends Component {
     return (
       <div className="introMymovie">
         <h1>My-movie-log | xyc</h1>
-        <Link to="/page">
+        <a href="/page">
           <button>Learn more</button>
-        </Link>
+        </a>
         <i>
           <a href="https://www.douban.com/people/68930030/">
             <img src={douban} alt="douban" />

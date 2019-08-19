@@ -9,14 +9,14 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 // lazy loading images
 const boundary = Bound({
-  margins: { bottom: -100 }
+  margins: { bottom: -150 }
 });
 
 const boundary2 = Bound({
   margins: { bottom: -200 }
 });
 
-let images = document.querySelectorAll("img");
+let images = document.querySelectorAll(".img");
 let posts = document.querySelectorAll("p");
 
 const onImageEnter = image => {

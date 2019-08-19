@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
+import List from "./List";
 
 export default class postList extends Component {
   constructor(props) {
@@ -11,14 +12,9 @@ export default class postList extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="postlist">
         <Nav />
-        <ul>
-          <li>test1</li>
-          <li>test2</li>
-          <li>test3</li>
-          <li>test4</li>
-        </ul>
+        <List />
         <Footer />
       </div>
     );
