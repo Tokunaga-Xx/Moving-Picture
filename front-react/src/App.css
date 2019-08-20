@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #222222;
+}
+
 .pageContainer {
   width: 100%;
   height: 100vh;
@@ -274,7 +282,7 @@
 }
 
 .nav {
-  margin: 2rem 4rem;
+  margin: 4rem 4rem;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,13 +361,70 @@
   height: 50vh;
 }
 
-.slider .img {
+.slider .img1 {
+  background-image: url(http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg);
+}
+
+.slider .img2 {
+  background-image: url(http://localhost:5000/api/picture/one/hibana-1566291844316.jpg);
+}
+
+.slider .img3 {
+  background-image: url(http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg);
+}
+
+.slider .imgarea {
   width: "auto";
   height: 50vh;
-  background-image: url(http://localhost:5000/api/picture/one/HelloBlog-1565246545718.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.slider .imgarea h1 {
+  opacity: 0;
+  color: #ffffff;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
+
+.slider .imgarea:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider .imgarea:hover h1 {
+  opacity: 1;
+  z-index: 2;
+}
+
+.moviedata {
+  width: 100%;
+  height: 32vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Artical {
@@ -393,9 +458,14 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -404,9 +474,16 @@
           align-items: center;
 }
 
-.Artical ul li .postArea p {
+.Artical ul li .postArea h1 {
+  width: 80%;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+.Artical ul li .postArea a {
+  position: absolute;
+  top: 80%;
+  left: 85%;
 }
 
 .postPage {
@@ -419,7 +496,7 @@
           flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

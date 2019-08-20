@@ -1,6 +1,8 @@
 <nav class="text-center navbar-light">
   <img src="./images/logo.png" alt="logo" class="" />
 </nav>
+<p class="lead mb-3">Welcome back, Tokunaga！</p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
 <% if ((typeof status != 'undefined' ? status : '') =='success') { %>
 <h2 class="text-center bg-success">
   <%= typeof msg != 'undefined' ? msg : '' %>

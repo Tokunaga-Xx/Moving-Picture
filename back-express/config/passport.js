@@ -1,6 +1,6 @@
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
-// const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 // Load User Model
 const User = require("../modules/User");
@@ -17,20 +17,20 @@ module.exports = function(passport) {
             });
           }
           // Match password
-          if (user.password == password) {
-            return done(null, user);
-          } else {
-            return done(null, false, { message: "Password incorrect!" });
-          }
+          // if (user.password == password) {
+          //   return done(null, user);
+          // } else {
+          //   return done(null, false, { message: "Password incorrect!" });
+          // }
 
-          // bcrypt.compare(password, user.password, (err, isMatch) => {
-          //   if (err) throw err;
-          //   if (isMatch) {
-          //     return done(null, user);
-          //   } else {
-          //     return done(null, false, { message: "Password incorrect!" });
-          //   }
-          // });
+          bcrypt.compare(password, user.password, (err, isMatch) => {
+            if (err) throw err;
+            if (isMatch) {
+              return done(null, user);
+            } else {
+              return done(null, false, { message: "Password incorrect!" });
+            }
+          });
         })
         .catch(err => console.log(err));
     })

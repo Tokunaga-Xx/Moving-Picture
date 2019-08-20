@@ -3,9 +3,25 @@ $colors: (
   picbed: #222222
 );
 
+$sliderPics: (
+  img1: url(http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg),
+  img2: url(http://localhost:5000/api/picture/one/hibana-1566291844316.jpg),
+  img3: url(http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg)
+);
+
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: #222222;
+  }
 }
 
 .pageContainer {
@@ -187,7 +203,7 @@ $colors: (
 }
 
 .nav {
-  margin: 2rem 4rem;
+  margin: 4rem 4rem;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -245,14 +261,56 @@ $colors: (
 .slider {
   width: 100%;
   height: 50vh;
-  .img {
+  .img1 {
+    background-image: map-get($sliderPics, img1);
+  }
+  .img2 {
+    background-image: map-get($sliderPics, img2);
+  }
+  .img3 {
+    background-image: map-get($sliderPics, img3);
+  }
+  .imgarea {
     width: "auto";
     height: 50vh;
-    background-image: url(http://localhost:5000/api/picture/one/HelloBlog-1565246545718.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    h1 {
+      opacity: 0;
+      color: #ffffff;
+      transition: all 1000ms;
+    }
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &:hover {
+      h1 {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
   }
+}
+
+.moviedata {
+  width: 100%;
+  height: 32vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Artical {
@@ -271,11 +329,19 @@ $colors: (
       }
       .postArea {
         flex: 1;
+        position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        p {
+        h1 {
+          width: 80%;
           transition: all 1s;
+        }
+        a {
+          position: absolute;
+          top: 80%;
+          left: 85%;
         }
       }
     }
@@ -285,7 +351,7 @@ $colors: (
 .postPage {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   h1 {
     color: crimson;

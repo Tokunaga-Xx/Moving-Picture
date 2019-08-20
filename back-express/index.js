@@ -30,11 +30,6 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Passport middleware
-app.use(logger);
-app.use(passport.initialize());
-app.use(passport.session());
-
 // Express session
 app.use(
   session({
@@ -43,6 +38,11 @@ app.use(
     saveUninitialized: true
   })
 );
+
+// Passport middleware
+app.use(logger);
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Connect flash
 app.use(flash());

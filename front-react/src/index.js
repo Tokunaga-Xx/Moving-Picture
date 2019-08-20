@@ -17,7 +17,7 @@ const boundary2 = Bound({
 });
 
 let images = document.querySelectorAll(".img");
-let posts = document.querySelectorAll("p");
+let posts = document.querySelectorAll(".h1");
 
 const onImageEnter = image => {
   return () => {
