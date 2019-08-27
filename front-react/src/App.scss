@@ -325,6 +325,49 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  #myElement {
+    width: 80%;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    p {
+      span {
+        transition: all 1s;
+      }
+      span:hover {
+        color: green;
+      }
+    }
+  }
+}
+// .ityped-cursor {
+//   font-size: 1.5rem;
+//   opacity: 1;
+//   -webkit-animation: blink 0.3s infinite;
+//   -moz-animation: blink 0.3s infinite;
+//   animation: blink 0.3s infinite;
+//   animation-direction: alternate;
+// }
+
+// @keyframes blink {
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @-webkit-keyframes blink {
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @-moz-keyframes blink {
+//   100% {
+//     opacity: 0;
+//   }
+// }
+.numberaffect {
+  color: crimson;
+  font-size: 1.5em;
 }
 
 .Artical {
@@ -351,6 +394,16 @@ a {
         h1 {
           width: 80%;
           transition: all 1s;
+          @media screen and (max-width: 1185px) {
+            font-size: 1.5em;
+          }
+          @media screen and (max-width: 888px) {
+            font-size: 1em;
+          }
+          @media screen and (max-width: 610px) {
+            font-size: 0.5em;
+          }
+          text-transform: uppercase;
         }
         a {
           position: absolute;
@@ -418,8 +471,69 @@ footer {
   color: #ffffff;
   height: 15vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  input {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .rateArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rate-content {
+    display: flex;
+    flex-flow: row-reverse;
+    $main: #ffa822; // 高亮颜色
+    $basic: #999; // 默认颜色
+
+    // 单个星星
+    input[name="rate"] {
+      font-family: "iconfont"; // 之前引入的iconfont字体
+      font-size: 30px;
+      // padding-right: 10px;
+      width: 15px;
+      overflow: hidden;
+      transition: transform 0.2s ease; // 加入过渡效果
+      // 默认显示的星星
+      &::after {
+        content: "\e645";
+        color: $basic;
+        transition: color 0.4s ease; // 加点颜色过渡效果
+      }
+      // 高亮的星星
+      &:checked,
+      &:hover {
+        &:after {
+          content: "\e73c";
+          color: $main;
+        }
+        & ~ input[name="rate"] {
+          &::after {
+            content: "\e73c";
+            color: $main;
+          }
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        & ~ input[name="rate"] {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .rate-content input[name="rate"]:nth-child(odd) {
+    direction: rtl;
+  }
+  h3 {
+    margin-top: 1em;
+    font-size: 1rem;
+  }
 }
 
 .showup {

@@ -15,8 +15,7 @@ class Artical extends Component {
             </div>
             <div className="postArea">
               <h1 className="h1">
-                A MASTERPIECE THAT ISN'T QUITE LIKE ANYTHING ELSE IN THE HISTORY
-                OF CINEMA
+                It's so different from other movies, a masterpiece!
               </h1>
               <a href="/post1">here</a>
             </div>
@@ -31,8 +30,7 @@ class Artical extends Component {
             </div>
             <div className="postArea">
               <h1 className="h1">
-                A MASTERPIECE THAT ISN'T QUITE LIKE ANYTHING ELSE IN THE HISTORY
-                OF CINEMA
+                So warm, so heartbreaking, so beautiful, just breathtaking!
               </h1>
               <a href="/post1">here</a>
             </div>
@@ -47,8 +45,7 @@ class Artical extends Component {
             </div>
             <div className="postArea">
               <h1 className="h1">
-                A MASTERPIECE THAT ISN'T QUITE LIKE ANYTHING ELSE IN THE HISTORY
-                OF CINEMA
+                It shows the real life & emotion about young people in japan.
               </h1>
               <a href="/post1">here</a>
             </div>

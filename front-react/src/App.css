@@ -449,6 +449,26 @@ a:link, a:visited, a:hover, a:active {
           align-items: center;
 }
 
+.moviedata #myElement {
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.moviedata #myElement p span {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.moviedata #myElement p span:hover {
+  color: green;
+}
+
+.numberaffect {
+  color: crimson;
+  font-size: 1.5em;
+}
+
 .Artical {
   width: 100%;
 }
@@ -500,6 +520,25 @@ a:link, a:visited, a:hover, a:active {
   width: 80%;
   -webkit-transition: all 1s;
   transition: all 1s;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1185px) {
+  .Artical ul li .postArea h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .Artical ul li .postArea h1 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .Artical ul li .postArea h1 {
+    font-size: 0.5em;
+  }
 }
 
 .Artical ul li .postArea a {
@@ -592,12 +631,92 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer input {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+footer .rateArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .rate-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+}
+
+footer .rate-content input[name="rate"] {
+  font-family: "iconfont";
+  font-size: 30px;
+  width: 15px;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+footer .rate-content input[name="rate"]::after {
+  content: "\e645";
+  color: #999;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+footer .rate-content input[name="rate"]:checked:after, footer .rate-content input[name="rate"]:hover:after {
+  content: "\e73c";
+  color: #ffa822;
+}
+
+footer .rate-content input[name="rate"]:checked ~ input[name="rate"]::after, footer .rate-content input[name="rate"]:hover ~ input[name="rate"]::after {
+  content: "\e73c";
+  color: #ffa822;
+}
+
+footer .rate-content input[name="rate"]:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+footer .rate-content input[name="rate"]:hover ~ input[name="rate"] {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+footer .rate-content input[name="rate"]:nth-child(odd) {
+  direction: rtl;
+}
+
+footer h3 {
+  margin-top: 1em;
+  font-size: 1rem;
 }
 
 .showup {
