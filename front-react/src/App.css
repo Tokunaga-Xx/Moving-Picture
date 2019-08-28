@@ -435,6 +435,11 @@ a:link, a:visited, a:hover, a:active {
   z-index: 2;
 }
 
+.swiper-wrapper {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
 .moviedata {
   width: 100%;
   height: 32vh;

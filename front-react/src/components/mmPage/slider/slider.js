@@ -6,7 +6,7 @@ const CoverflowEffect = () => {
   const params = {
     effect: "coverflow",
     initialSlide: 2,
-    speed: 1000,
+    speed: 800,
     centeredSlides: true,
     slidesPerView: 2,
     keyboard: true,

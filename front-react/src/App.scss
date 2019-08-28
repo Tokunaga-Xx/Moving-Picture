@@ -319,6 +319,10 @@ a {
   }
 }
 
+.swiper-wrapper {
+  transition-timing-function: ease-in-out;
+}
+
 .moviedata {
   width: 100%;
   height: 32vh;

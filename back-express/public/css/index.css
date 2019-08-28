@@ -12,16 +12,34 @@ ul {
   list-style: none;
 }
 
-.container {
-  background: white;
+.card {
+  margin: auto 8vh;
 }
 
 nav {
   background-color: lightblue;
+  position: relative;
 }
 
 nav img {
   width: 12%;
+}
+
+nav .info {
+  position: absolute;
+  right: -1%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .node {
@@ -37,7 +55,48 @@ nav img {
 }
 
 .form {
-  margin-top: 15vh;
+  margin: 2em 5em 0 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form #custom-button {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form .fakeinput {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form #custom-text {
+  margin-left: 10px;
+  font-family: inherit;
+  color: #aaa;
 }
 
 .gridContainer {
