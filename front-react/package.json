@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bounds.js": "^1.0.3",
+    "gh-pages": "^2.1.1",
     "ityped": "^1.0.3",
     "markdown-to-jsx": "^6.10.3",
     "marked": "^0.7.0",
