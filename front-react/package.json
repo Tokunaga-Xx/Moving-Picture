@@ -1,7 +1,7 @@
 {
   "name": "movingpicture",
   "version": "0.1.0",
-  "homepage": "https://Tokunaga-X.github.io/my-app",
+  "homepage": "https://tokunaga.pub",
   "private": true,
   "dependencies": {
     "bounds.js": "^1.0.3",
