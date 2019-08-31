@@ -9,6 +9,7 @@ class Artical extends Component {
             <div className="imgArea">
               <img
                 data-src="http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg"
+                // data-src="http://106.15.88.174:5000/api/picture/one/boyhood-1566288713858.jpg"
                 alt=""
                 className="img"
               />
@@ -24,6 +25,7 @@ class Artical extends Component {
             <div className="imgArea">
               <img
                 data-src="http://localhost:5000/api/picture/one/hibana-1566291844316.jpg"
+                // data-src="http://106.15.88.174:5000/api/picture/one/hibana-1566291844316.jpg"
                 alt=""
                 className="img"
               />
@@ -39,6 +41,7 @@ class Artical extends Component {
             <div className="imgArea">
               <img
                 data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
+                // data-src="http://106.15.88.174:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
                 alt=""
                 className="img"
               />
