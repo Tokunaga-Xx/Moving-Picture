@@ -1,6 +1,41 @@
 import React, { Component } from "react";
+import Bound from "bounds.js";
 
 class Artical extends Component {
+  componentDidMount() {
+    // lazy loading images
+    const boundary = Bound({
+      margins: { bottom: -150 }
+    });
+
+    const boundary2 = Bound({
+      margins: { bottom: -200 }
+    });
+
+    let images = document.querySelectorAll(".img");
+    let posts = document.querySelectorAll(".h1");
+
+    const onImageEnter = image => {
+      return () => {
+        image.src = image.dataset.src;
+        boundary.unWatch(image);
+      };
+    };
+    const onPEnter = post => {
+      return () => {
+        post.classList.toggle("showup");
+        boundary2.unWatch(post);
+      };
+    };
+
+    posts.forEach(post => {
+      boundary2.watch(post, onPEnter(post));
+    });
+
+    images.forEach(img => {
+      boundary.watch(img, onImageEnter(img));
+    });
+  }
   render() {
     return (
       <div className={"Artical"}>
@@ -9,7 +44,6 @@ class Artical extends Component {
             <div className="imgArea">
               <img
                 data-src="http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg"
-                // data-src="http://106.15.88.174:5000/api/picture/one/boyhood-1566288713858.jpg"
                 alt=""
                 className="img"
               />
@@ -25,7 +59,6 @@ class Artical extends Component {
             <div className="imgArea">
               <img
                 data-src="http://localhost:5000/api/picture/one/hibana-1566291844316.jpg"
-                // data-src="http://106.15.88.174:5000/api/picture/one/hibana-1566291844316.jpg"
                 alt=""
                 className="img"
               />
@@ -41,7 +74,6 @@ class Artical extends Component {
             <div className="imgArea">
               <img
                 data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
-                // data-src="http://106.15.88.174:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
                 alt=""
                 className="img"
               />

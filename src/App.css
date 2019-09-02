@@ -725,8 +725,8 @@ footer h3 {
 }
 
 .showup {
-  -webkit-animation: showup 1s ease-in-out;
-          animation: showup 1s ease-in-out;
+  -webkit-animation: showup 2s ease-in-out;
+          animation: showup 2s ease-in-out;
 }
 
 @-webkit-keyframes runningFrames {
@@ -763,24 +763,18 @@ footer h3 {
 
 @-webkit-keyframes popup {
   0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
     opacity: 1;
   }
 }
 
 @keyframes popup {
   0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
     opacity: 1;
   }
 }

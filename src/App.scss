@@ -544,7 +544,7 @@ footer {
 }
 
 .showup {
-  animation: showup 1s ease-in-out;
+  animation: showup 2s ease-in-out;
 }
 
 @keyframes runningFrames {
@@ -563,11 +563,10 @@ footer {
 
 @keyframes popup {
   0% {
-    transform: translateY(-100%);
+    opacity: 0;
   }
 
   100% {
-    transform: translateY(0%);
     opacity: 1;
   }
 }
