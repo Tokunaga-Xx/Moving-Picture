@@ -20,7 +20,7 @@ class Footer extends Component {
           </div>
         </div>
 
-        <h3>Made by TokunagaX - 2019</h3>
+        <h3>Designed&coded by TokunagaX - 2019</h3>
       </footer>
     );
   }
