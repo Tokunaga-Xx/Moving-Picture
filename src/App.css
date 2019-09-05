@@ -1,6 +1,78 @@
+html {
+  height: 100%;
+  --bg: #fcfcfc;
+  --bg-panel: #ebebeb;
+  --bg-footer: #222222;
+  --color-heading: #0077ff;
+  --color-text: #000000;
+  --color-footer-text: #fcfcfc;
+}
+
+html[data-theme="dark"] {
+  --bg: #333333;
+  --bg-panel: #434343;
+  --bg-footer: #cfcfcf;
+  --color-text: #fcfcfc;
+  --color-footer-text: #333333;
+}
+
+body {
+  background-color: var(--bg);
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+.toggle-container {
+  position: absolute;
+  top: -5vh;
+  right: -5vh;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-heading);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
 }
 
 a {
@@ -304,7 +376,9 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .nav {
-  margin: 4rem 4rem;
+  background: var(--bg);
+  position: relative;
+  margin: 3rem 3rem;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -320,6 +394,9 @@ a:link, a:visited, a:hover, a:active {
 
 .nav h1 {
   cursor: default;
+  color: var(--color-text);
+  font-size: 2em;
+  margin-left: 3vh;
 }
 
 .nav h1 span {
@@ -335,7 +412,7 @@ a:link, a:visited, a:hover, a:active {
 
 .nav ul li a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-text);
   letter-spacing: 1px;
   position: relative;
   margin: 0 3rem;
@@ -443,6 +520,7 @@ a:link, a:visited, a:hover, a:active {
 .moviedata {
   width: 100%;
   height: 32vh;
+  margin-top: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,12 +530,14 @@ a:link, a:visited, a:hover, a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: var(--bg-panel);
 }
 
 .moviedata #myElement {
   width: 80%;
   font-size: 1.2rem;
   font-weight: bolder;
+  color: var(--color-text);
 }
 
 .moviedata #myElement p span {
@@ -523,8 +603,11 @@ a:link, a:visited, a:hover, a:active {
 
 .Artical ul li .postArea h1 {
   width: 80%;
+  margin: auto;
+  opacity: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
+  color: var(--color-text);
   text-transform: uppercase;
 }
 
@@ -544,12 +627,6 @@ a:link, a:visited, a:hover, a:active {
   .Artical ul li .postArea h1 {
     font-size: 0.5em;
   }
-}
-
-.Artical ul li .postArea a {
-  position: absolute;
-  top: 80%;
-  left: 85%;
 }
 
 .postPage {
@@ -630,8 +707,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 footer {
-  background: #222222;
-  color: #ffffff;
+  background: var(--bg-footer);
+  color: var(--color-footer-text);
   height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1090,5 +1167,15 @@ footer h3 {
 .loadArea .dribbble img {
   display: block;
   height: 28px;
+}
+
+html.transition,
+html.transition *,
+html.transition::before,
+html.transition::after {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
 }
 /*# sourceMappingURL=App.css.map */
