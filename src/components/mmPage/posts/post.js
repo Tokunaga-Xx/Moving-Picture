@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Markdown from "react-markdown";
 import markdownfile from "./post1.md";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 class Post extends Component {
   constructor() {
@@ -9,6 +11,7 @@ class Post extends Component {
       markdown: ""
     };
   }
+
   componentDidMount() {
     fetch(markdownfile)
       .then(response => {
@@ -22,18 +25,18 @@ class Post extends Component {
   }
   render() {
     const { markdown } = this.state;
-    const name = "<Love, Death & Robots>";
-    const head = "第七集《天鹰座裂隙之外》原版小说的设定以及一些可能的解读";
+    // const name = "<Love, Death & Robots>";
+    // const head = "第七集《天鹰座裂隙之外》原版小说的设定以及一些可能的解读";
     return (
-      <div className={"postPage"}>
-        <h1>{name}</h1>
-        <h3>{head}</h3>
-        <Markdown
-          source={markdown}
-          className="markdown"
-          head="第七集《天鹰座裂隙之外》原版小说的设定以及一些可能的解读"
-          name="<Love, Death & Robots>"
-        />
+      <div>
+        <Nav />
+        <div className={"postPage"}>
+          <button>
+            <a href="/postlist">Back</a>
+          </button>
+          <Markdown source={markdown} className="markdown" />
+        </div>
+        <Footer />
       </div>
     );
   }

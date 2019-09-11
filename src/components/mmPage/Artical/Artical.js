@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Bound from "bounds.js";
+import Singlepart from "./Single";
 
 class Artical extends Component {
   componentDidMount() {
@@ -40,60 +41,45 @@ class Artical extends Component {
     return (
       <div className={"Artical"}>
         <ul>
-          <li>
-            <div className="imgArea">
-              <a href="/post1">
-                <img
-                  data-src="http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg"
-                  alt=""
-                  className="img"
-                />
-              </a>
-            </div>
-            <div className="postArea">
-              <a href="/post1">
-                <h1 className="h1">
-                  It's so different from other movies, a masterpiece!
-                </h1>
-              </a>
-            </div>
-          </li>
-          <li>
-            <div className="imgArea">
-              <a href="/post1">
-                <img
-                  data-src="http://localhost:5000/api/picture/one/hibana-1566291844316.jpg"
-                  alt=""
-                  className="img"
-                />
-              </a>
-            </div>
-            <div className="postArea">
-              <a href="/post1">
-                <h1 className="h1">
-                  So warm, so heartbreaking, so beautiful, just breathtaking!
-                </h1>
-              </a>
-            </div>
-          </li>
-          <li>
-            <div className="imgArea">
-              <a href="/post1">
-                <img
-                  data-src="http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
-                  alt=""
-                  className="img"
-                />
-              </a>
-            </div>
-            <div className="postArea">
-              <a href="/post1">
-                <h1 className="h1">
-                  It shows the real life & emotion about young people in japan.
-                </h1>
-              </a>
-            </div>
-          </li>
+          <Singlepart
+            link={"/post1"}
+            imgsrc={
+              "http://localhost:5000/api/picture/one/ldr7-1566200714659.jpg"
+            }
+            content={`How far can imagination go? This is an example.`}
+          />
+          <Singlepart
+            link={"/post1"}
+            imgsrc={
+              "http://localhost:5000/api/picture/one/meandearlandthedyinggirl-1568199984174.jpg"
+            }
+            content={`That's a film that worth saving time for! Best in 2016, even now
+            is january.`}
+          />
+          <Singlepart
+            link={"/post1"}
+            imgsrc={
+              "http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg"
+            }
+            content={`It's so different from other movies, a masterpiece!
+            `}
+          />
+          <Singlepart
+            link={"/post1"}
+            imgsrc={
+              "http://localhost:5000/api/picture/one/hibana-1566291844316.jpg"
+            }
+            content={`So warm, so heartbreaking, so beautiful, just breathtaking!
+            `}
+          />
+          <Singlepart
+            link={"/post1"}
+            imgsrc={
+              "http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
+            }
+            content={`It shows the real life & emotion about young people in japan.
+            `}
+          />
         </ul>
       </div>
     );

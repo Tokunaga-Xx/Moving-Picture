@@ -1,26 +1,32 @@
 import React, { Component } from "react";
 
 export default class load extends Component {
+  componentDidMount() {
+    document.body.classList.add("overflow");
+  }
   render() {
     return (
+      // old:https://codepen.io/aaroniker/pen/omvYNZ
       <div className="loadArea">
-        <div className="loader">
-          <svg viewBox="0 0 80 80">
-            <circle id="test" cx="40" cy="40" r="32"></circle>
-          </svg>
+        <div className="body">
+          <span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <div className="base">
+            <span></span>
+            <div className="face"></div>
+          </div>
         </div>
-
-        <div className="loader triangle">
-          <svg viewBox="0 0 86 80">
-            <polygon points="43 8 79 72 7 72"></polygon>
-          </svg>
+        <div className="longfazers">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-
-        <div className="loader">
-          <svg viewBox="0 0 80 80">
-            <rect x="8" y="8" width="64" height="64"></rect>
-          </svg>
-        </div>
+        <h1>Loading~~~</h1>
       </div>
     );
   }

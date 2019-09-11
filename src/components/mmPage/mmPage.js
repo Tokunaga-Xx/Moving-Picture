@@ -4,7 +4,7 @@ import Slider from "./Slider/Slider";
 import Data from "./movieData/movieData";
 import MovieComment from "./Artical/Artical";
 import Footer from "./Footer/Footer";
-import Loading1 from "../intro/load";
+import Loading from "../intro/load";
 import fetch from "../intro/fetch";
 
 class mmPage extends Component {
@@ -17,15 +17,10 @@ class mmPage extends Component {
         loading: false
       }));
     });
-    // setTimeout(() => {
-    //   this.setState(() => ({
-    //     loading: false
-    //   }));
-    // }, 3000);
   }
   render() {
     return this.state.loading ? (
-      <Loading1 />
+      <Loading />
     ) : (
       <div className="mmPage">
         <Nav />
