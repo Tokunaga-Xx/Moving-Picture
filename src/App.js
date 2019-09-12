@@ -4,6 +4,7 @@ import IntroPage from "./components/intro/intro";
 import mmPage from "./components/mmPage/mmPage";
 import postlist from "./components/mmPage/postList/postList";
 import post1 from "./components/mmPage/posts/post";
+import Notfound from "./components/Notfound";
 import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path="/page" component={mmPage} />
             <Route path="/postlist" component={postlist} />
             <Route path="/post1" component={post1} />
+            <Route component={Notfound} />
           </Switch>
         </div>
       </Router>

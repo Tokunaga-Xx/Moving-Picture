@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Bound from "bounds.js";
 import Singlepart from "./Single";
+// import song from "../../../audios/meandearl.mp3";
 
 class Artical extends Component {
   componentDidMount() {
