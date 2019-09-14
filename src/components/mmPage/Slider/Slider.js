@@ -1,6 +1,9 @@
 import React from "react";
 import Swiper from "react-id-swiper";
 import "react-id-swiper/lib/styles/css/swiper.css";
+import long from "../../../images/long.svg";
+import short from "../../../images/short1.svg";
+import Score from "../Score/Score";
 
 const CoverflowEffect = () => {
   const params = {
@@ -34,13 +37,46 @@ const CoverflowEffect = () => {
     <div className="slider">
       <Swiper {...params} className="slider">
         <div className={"img1 imgarea"}>
-          <h1>Boyhood</h1>
+          <div className="cover">
+            <div className="row1">
+              <h1>Boyhood</h1>
+              <div className="coverside">
+                <img src={short} alt="" />
+                <img src={long} alt="" />
+              </div>
+            </div>
+            <div className="row2">
+              <Score score="1" />
+            </div>
+          </div>
         </div>
         <div className={"img2 imgarea"}>
-          <h1>Hibana</h1>
+          <div className="cover">
+            <div className="row1">
+              <h1>Hibana</h1>
+              <div className="coverside">
+                <img src={short} alt="" />
+                <img src={long} alt="" />
+              </div>
+            </div>
+            <div className="row2">
+              <Score score="2" />
+            </div>
+          </div>
         </div>
         <div className={"img3 imgarea"}>
-          <h1>Terrace House : Aloha State</h1>
+          <div className="cover">
+            <div className="row1">
+              <h1>Terrace House:Aloha State</h1>
+              <div className="coverside">
+                <img src={short} alt="" />
+                <img src={long} alt="" />
+              </div>
+            </div>
+            <div className="row2">
+              <Score score="3" />
+            </div>
+          </div>
         </div>
       </Swiper>
     </div>
@@ -48,40 +84,3 @@ const CoverflowEffect = () => {
 };
 
 export default CoverflowEffect;
-
-// const CoverflowEffect = () => {
-//   const params = {
-//     effect: "coverflow",
-//     speed: 1000,
-//     initialSlide: 1,
-//     centeredSlides: true,
-//     slidesPerView: 2,
-//     loop: true,
-//     autoplay: {
-//       delay: 5000,
-//       stopOnLastSlide: false,
-//       disableOnInteraction: false
-//     },
-//     coverflowEffect: {
-//       rotate: 0,
-//       stretch: -50,
-//       depth: 100,
-//       modifier: 1,
-//       slideShadows: true
-//     },
-//     pagination: {
-//       el: ".swiper-pagination"
-//     }
-//   };
-//   return (
-//     <div className="slider">
-//       <Swiper {...params}>
-//         <div className="imgarea img1" />
-//         <div className="imgarea img2" />
-//         <div className="imgarea img3" />
-//       </Swiper>
-//     </div>
-//   );
-// };
-
-// export default CoverflowEffect;

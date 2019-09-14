@@ -495,11 +495,73 @@ a:link, a:visited, a:hover, a:active {
   z-index: 1;
 }
 
-.slider .imgarea h1 {
+.slider .imgarea .cover {
   opacity: 0;
   color: #ffffff;
   -webkit-transition: all 1000ms;
   transition: all 1000ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider .imgarea .cover .row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .imgarea .cover .row1 h1 {
+  background: rgba(220, 20, 60, 0.3);
+  padding: 0.5em;
+  min-width: 12vw;
+  max-width: 25vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+}
+
+.slider .imgarea .cover .row1 .coverside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  margin-left: 10%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.slider .imgarea .cover .row1 .coverside img {
+  width: 32px;
+  height: 32px;
+  margin: 1em;
+  cursor: pointer;
+}
+
+.slider .imgarea .cover .row1 .coverside img:hover {
+  -webkit-animation: simpleBtnchange 500ms ease-in-out;
+          animation: simpleBtnchange 500ms ease-in-out;
+}
+
+.slider .imgarea .cover .row2 {
+  margin-top: 2em;
+  cursor: default;
 }
 
 .slider .imgarea:hover::after {
@@ -512,7 +574,7 @@ a:link, a:visited, a:hover, a:active {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.slider .imgarea:hover h1 {
+.slider .imgarea:hover .cover {
   opacity: 1;
   z-index: 2;
 }
@@ -551,7 +613,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .moviedata #myElement p span:hover {
-  color: green;
+  color: #3d3dc4;
 }
 
 .numberaffect {
@@ -567,6 +629,7 @@ a:link, a:visited, a:hover, a:active {
   display: -ms-grid;
   display: grid;
   list-style: none;
+  margin-top: 1rem;
 }
 
 .Artical ul li {
@@ -574,6 +637,28 @@ a:link, a:visited, a:hover, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.Artical ul li .line {
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  width: 97vw;
+  height: 5px;
+  background: var(--bg-footer);
+}
+
+.Artical ul li .line .block {
+  position: absolute;
+  right: -0.5vw;
+  top: -8px;
+  width: 4vw;
+  height: 20px;
+  background: #000;
+  float: right;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .Artical ul li .imgArea {
@@ -607,12 +692,19 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .Artical ul li .postArea .icon {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .Artical ul li .postArea .icon img {
+  width: 32px;
+  height: 32px;
   margin: 1em;
   cursor: pointer;
+}
+
+.Artical ul li .postArea .icon img:hover {
+  -webkit-animation: simpleBtnchange 500ms ease-in-out;
+          animation: simpleBtnchange 500ms ease-in-out;
 }
 
 .Artical ul li .postArea audio {
@@ -621,37 +713,39 @@ a:link, a:visited, a:hover, a:active {
   bottom: 0;
 }
 
-.Artical ul li .postArea h1 {
-  width: 80%;
+.Artical ul li .postArea .head {
+  width: 85%;
   margin: auto;
+  margin-top: 1em;
   opacity: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
   color: var(--color-text);
   text-transform: uppercase;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
 }
 
 @media screen and (max-width: 1185px) {
-  .Artical ul li .postArea h1 {
+  .Artical ul li .postArea .head {
     font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 888px) {
-  .Artical ul li .postArea h1 {
+  .Artical ul li .postArea .head {
     font-size: 1em;
   }
 }
 
 @media screen and (max-width: 610px) {
-  .Artical ul li .postArea h1 {
+  .Artical ul li .postArea .head {
     font-size: 0.5em;
   }
+}
+
+.Artical ul li .postArea .head2 {
+  color: #222;
+  margin-top: 1em;
+  float: right;
 }
 
 .postPage {
@@ -705,12 +799,14 @@ a:link, a:visited, a:hover, a:active {
 
 .postPage h1 {
   color: crimson;
+  font-size: 3em;
   margin: 1em;
   text-align: center;
 }
 
 .postPage h3 {
-  color: #42a0df;
+  color: #3d3d3d;
+  font-size: 1em;
   margin: 1em;
   text-align: center;
 }
@@ -806,7 +902,7 @@ a:link, a:visited, a:hover, a:active {
 footer {
   background: var(--bg-footer);
   color: var(--color-footer-text);
-  height: 15vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,8 +990,8 @@ footer .rate-content input[name="rate"]:nth-child(odd) {
 }
 
 footer h3 {
-  margin-top: 1em;
-  font-size: 1rem;
+  margin-top: 0.5em;
+  font-size: 0.5rem;
 }
 
 .showup {

@@ -47,39 +47,26 @@ class Artical extends Component {
             imgsrc={
               "http://localhost:5000/api/picture/one/ldr7-1566200714659.jpg"
             }
-            content={`How far can imagination go? This is an example.`}
+            head={`Some explaination and thoughts about Original Novels of Episode7 "Beyond the rift"`}
+            head2={"Love Death&Robots"}
           />
           <Singlepart
             link={"/post1"}
             imgsrc={
               "http://localhost:5000/api/picture/one/meandearlandthedyinggirl-1568199984174.jpg"
             }
-            content={`That's a film that worth saving time for! Best in 2016, even now
+            head={`That's a film that worth saving time for! Best in 2016, even now
             is january.`}
+            head2={"Me and Earl&the dying girl"}
           />
           <Singlepart
             link={"/post1"}
             imgsrc={
               "http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg"
             }
-            content={`It's so different from other movies, a masterpiece!
+            head={`It's so different from other movies, a masterpiece!
             `}
-          />
-          <Singlepart
-            link={"/post1"}
-            imgsrc={
-              "http://localhost:5000/api/picture/one/hibana-1566291844316.jpg"
-            }
-            content={`So warm, so heartbreaking, so beautiful, just breathtaking!
-            `}
-          />
-          <Singlepart
-            link={"/post1"}
-            imgsrc={
-              "http://localhost:5000/api/picture/one/terracehousealoha-1565784144585.jpg"
-            }
-            content={`It shows the real life & emotion about young people in japan.
-            `}
+            head2={"Boyhood"}
           />
         </ul>
       </div>
