@@ -46,7 +46,7 @@ const CoverflowEffect = () => {
               </div>
             </div>
             <div className="row2">
-              <Score score="1" />
+              <Score score="9" />
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const CoverflowEffect = () => {
               </div>
             </div>
             <div className="row2">
-              <Score score="2" />
+              <Score score="10" />
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const CoverflowEffect = () => {
               </div>
             </div>
             <div className="row2">
-              <Score score="3" />
+              <Score score="7" />
             </div>
           </div>
         </div>

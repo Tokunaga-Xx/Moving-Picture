@@ -18,7 +18,7 @@ export default class Single extends Component {
           </a>
         </div>
         <div className="postArea">
-          <a href="/post1">
+          <a href={this.props.link}>
             <h1 className="head">{this.props.head}</h1>
             <h2 className="head2">
               <span style={{ color: "crimson" }}>---</span>

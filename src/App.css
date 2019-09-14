@@ -655,7 +655,7 @@ a:link, a:visited, a:hover, a:active {
   top: -8px;
   width: 4vw;
   height: 20px;
-  background: #000;
+  background: var(--bg-footer);
   float: right;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -743,7 +743,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .Artical ul li .postArea .head2 {
-  color: #222;
+  color: var(--color-text);
   margin-top: 1em;
   float: right;
 }
@@ -799,7 +799,7 @@ a:link, a:visited, a:hover, a:active {
 
 .postPage h1 {
   color: crimson;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 1em;
   text-align: center;
 }
