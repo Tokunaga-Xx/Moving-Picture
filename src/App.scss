@@ -21,6 +21,26 @@ html {
   --color-heading: #0077ff;
   --color-text: #000000;
   --color-footer-text: #fcfcfc;
+
+  @media screen and (max-width: 1600px) {
+    --font-size-ex: 3rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-p: 1rem;
+  }
+  @media screen and (max-width: 888px) {
+    --font-size-ex: 2.5rem;
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.1rem;
+    --font-size-p: 0.75rem;
+  }
+  @media screen and (max-width: 610px) {
+    --font-size-ex: 1.75rem;
+
+    --font-size-h1: 1rem;
+    --font-size-h2: 0.75rem;
+    --font-size-p: 0.5rem;
+  }
 }
 
 html[data-theme="dark"] {
@@ -300,15 +320,22 @@ a {
   margin: 3rem 3rem;
   padding: 0;
   display: flex;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
   justify-content: space-between;
+
   align-items: center;
   text-transform: uppercase;
-  // background: #222222;
   h1 {
     cursor: default;
     color: var(--color-text);
     font-size: 2em;
     margin-left: 3vh;
+    @media screen and (max-width: 700px) {
+      font-size: 3rem;
+      margin: 0;
+    }
     span {
       color: crimson;
     }
@@ -316,6 +343,11 @@ a {
   ul {
     display: flex;
     list-style: none;
+    @media screen and (max-width: 700px) {
+      margin-top: 2rem;
+      border: 2px solid black;
+      padding: 0.5rem;
+    }
     li {
       a {
         text-decoration: none;
@@ -323,6 +355,9 @@ a {
         letter-spacing: 1px;
         position: relative;
         margin: 0 3rem;
+        @media screen and (max-width: 700px) {
+          margin: auto 2rem;
+        }
         padding: 5px 0;
       }
       a:last-child {
@@ -387,10 +422,19 @@ a {
       transition: all 1000ms;
       display: flex;
       flex-direction: column;
+
       justify-content: center;
       align-items: center;
       .row1 {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+          .coverside {
+            margin-top: 1rem;
+          }
+        }
         h1 {
           background: rgba(220, 20, 60, 0.3);
           padding: 0.5em;
@@ -400,6 +444,7 @@ a {
           white-space: nowrap;
           text-overflow: ellipsis;
           cursor: default;
+          font-size: var(--font-size-ex);
         }
         .coverside {
           display: flex;
@@ -416,6 +461,9 @@ a {
           }
           display: flex;
           margin-left: 10%;
+          @media screen and (max-width: 600px) {
+            margin-left: 0;
+          }
           background: rgba(255, 255, 255, 0.5);
         }
       }
@@ -458,7 +506,15 @@ a {
   background-color: var(--bg-panel);
   #myElement {
     width: 80%;
-    font-size: 1.2rem;
+    @media screen and (max-width: 1920px) {
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 1160px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (max-width: 610px) {
+      font-size: 1rem;
+    }
     font-weight: bolder;
     color: var(--color-text);
     p {
@@ -484,7 +540,7 @@ a {
     list-style: none;
     margin-top: 1rem;
     li {
-      margin: 1em;
+      margin: 0.5em;
       display: flex;
       position: relative;
       .line {
@@ -507,8 +563,12 @@ a {
       }
       .imgArea {
         flex: 1;
+        overflow: hidden;
         img {
           width: 100%;
+          // @media screen and (max-width: 600px) {
+          //   transform: scale(1.2);
+          // }
         }
       }
       .postArea {
@@ -542,21 +602,14 @@ a {
           opacity: 1;
           transition: all 1s;
           color: var(--color-text);
-          @media screen and (max-width: 1185px) {
-            font-size: 1.5em;
-          }
-          @media screen and (max-width: 888px) {
-            font-size: 1em;
-          }
-          @media screen and (max-width: 610px) {
-            font-size: 0.5em;
-          }
+          font-size: var(--font-size-h1);
           text-transform: uppercase;
         }
         .head2 {
           color: var(--color-text);
           margin-top: 1em;
           float: right;
+          font-size: var(--font-size-h2);
         }
       }
     }

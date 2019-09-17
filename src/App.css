@@ -9,6 +9,33 @@ html {
   --color-footer-text: #fcfcfc;
 }
 
+@media screen and (max-width: 1600px) {
+  html {
+    --font-size-ex: 3rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-p: 1rem;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  html {
+    --font-size-ex: 2.5rem;
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.1rem;
+    --font-size-p: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  html {
+    --font-size-ex: 1.75rem;
+    --font-size-h1: 1rem;
+    --font-size-h2: 0.75rem;
+    --font-size-p: 0.5rem;
+  }
+}
+
 html[data-theme="dark"] {
   --bg: #333333;
   --bg-panel: #434343;
@@ -397,11 +424,27 @@ a:link, a:visited, a:hover, a:active {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 700px) {
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .nav h1 {
   cursor: default;
   color: var(--color-text);
   font-size: 2em;
   margin-left: 3vh;
+}
+
+@media screen and (max-width: 700px) {
+  .nav h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
 }
 
 .nav h1 span {
@@ -415,6 +458,14 @@ a:link, a:visited, a:hover, a:active {
   list-style: none;
 }
 
+@media screen and (max-width: 700px) {
+  .nav ul {
+    margin-top: 2rem;
+    border: 2px solid black;
+    padding: 0.5rem;
+  }
+}
+
 .nav ul li a {
   text-decoration: none;
   color: var(--color-text);
@@ -422,6 +473,12 @@ a:link, a:visited, a:hover, a:active {
   position: relative;
   margin: 0 3rem;
   padding: 5px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .nav ul li a {
+    margin: auto 2rem;
+  }
 }
 
 .nav ul li a:last-child {
@@ -519,6 +576,24 @@ a:link, a:visited, a:hover, a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .slider .imgarea .cover .row1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slider .imgarea .cover .row1 .coverside {
+    margin-top: 1rem;
+  }
 }
 
 .slider .imgarea .cover .row1 h1 {
@@ -530,6 +605,7 @@ a:link, a:visited, a:hover, a:active {
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: default;
+  font-size: var(--font-size-ex);
 }
 
 .slider .imgarea .cover .row1 .coverside {
@@ -557,6 +633,12 @@ a:link, a:visited, a:hover, a:active {
 .slider .imgarea .cover .row1 .coverside img:hover {
   -webkit-animation: simpleBtnchange 500ms ease-in-out;
           animation: simpleBtnchange 500ms ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .slider .imgarea .cover .row1 .coverside {
+    margin-left: 0;
+  }
 }
 
 .slider .imgarea .cover .row2 {
@@ -602,9 +684,26 @@ a:link, a:visited, a:hover, a:active {
 
 .moviedata #myElement {
   width: 80%;
-  font-size: 1.2rem;
   font-weight: bolder;
   color: var(--color-text);
+}
+
+@media screen and (max-width: 1920px) {
+  .moviedata #myElement {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .moviedata #myElement {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .moviedata #myElement {
+    font-size: 1rem;
+  }
 }
 
 .moviedata #myElement p span {
@@ -633,7 +732,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .Artical ul li {
-  margin: 1em;
+  margin: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,6 +764,7 @@ a:link, a:visited, a:hover, a:active {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow: hidden;
 }
 
 .Artical ul li .imgArea img {
@@ -721,31 +821,15 @@ a:link, a:visited, a:hover, a:active {
   -webkit-transition: all 1s;
   transition: all 1s;
   color: var(--color-text);
+  font-size: var(--font-size-h1);
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 1185px) {
-  .Artical ul li .postArea .head {
-    font-size: 1.5em;
-  }
-}
-
-@media screen and (max-width: 888px) {
-  .Artical ul li .postArea .head {
-    font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .Artical ul li .postArea .head {
-    font-size: 0.5em;
-  }
 }
 
 .Artical ul li .postArea .head2 {
   color: var(--color-text);
   margin-top: 1em;
   float: right;
+  font-size: var(--font-size-h2);
 }
 
 .postPage {
