@@ -1,31 +1,45 @@
 import React, { Component } from "react";
-import Markdown from "react-markdown";
-import markdownfile from "./earl1.md";
+import marked from "marked";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 
 class Post extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    let file = this.props.location.query.file;
+
     this.state = {
-      markdown: ""
+      file: `.${file}.md`
     };
   }
 
+  componentWillMount() {
+    // marked相关配置
+    marked.setOptions({
+      renderer: new marked.Renderer(),
+      gfm: true,
+      tables: true,
+      breaks: true,
+      pedantic: false,
+      sanitize: true,
+      smartLists: true,
+      smartypants: false
+    });
+  }
   componentDidMount() {
+    const markdownfile = require(`${this.state.file}`);
+
     fetch(markdownfile)
       .then(response => {
         return response.text();
       })
       .then(text => {
         this.setState({
-          markdown: text
+          content: text
         });
       });
   }
   render() {
-    const { markdown } = this.state;
-
     return (
       <div>
         <Nav />
@@ -33,7 +47,12 @@ class Post extends Component {
           <button>
             <a href="/postlist">Back</a>
           </button>
-          <Markdown source={markdown} className="markdown" />
+          <div
+            id="mdContent"
+            dangerouslySetInnerHTML={{
+              __html: this.state.content ? marked(this.state.content) : null
+            }}
+          ></div>
         </div>
         <Footer />
       </div>

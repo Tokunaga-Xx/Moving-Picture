@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 html {
   height: 100%;
@@ -11,16 +12,16 @@ html {
 
 @media screen and (max-width: 1600px) {
   html {
-    --font-size-ex: 3rem;
+    --font-size-ex: 2.25rem;
     --font-size-h1: 2rem;
     --font-size-h2: 1.5rem;
     --font-size-p: 1rem;
   }
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 1280px) {
   html {
-    --font-size-ex: 2.5rem;
+    --font-size-ex: 1.75rem;
     --font-size-h1: 1.5rem;
     --font-size-h2: 1.1rem;
     --font-size-p: 0.75rem;
@@ -29,7 +30,7 @@ html {
 
 @media screen and (max-width: 610px) {
   html {
-    --font-size-ex: 1.75rem;
+    --font-size-ex: 1.5rem;
     --font-size-h1: 1rem;
     --font-size-h2: 0.75rem;
     --font-size-p: 0.5rem;
@@ -630,6 +631,13 @@ a:link, a:visited, a:hover, a:active {
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  .slider .imgarea .cover .row1 .coverside img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .slider .imgarea .cover .row1 .coverside img:hover {
   -webkit-animation: simpleBtnchange 500ms ease-in-out;
           animation: simpleBtnchange 500ms ease-in-out;
@@ -668,7 +676,7 @@ a:link, a:visited, a:hover, a:active {
 
 .moviedata {
   width: 100%;
-  height: 32vh;
+  height: 35vh;
   margin-top: 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -680,10 +688,11 @@ a:link, a:visited, a:hover, a:active {
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--bg-panel);
+  position: relative;
 }
 
 .moviedata #myElement {
-  width: 80%;
+  width: 90%;
   font-weight: bolder;
   color: var(--color-text);
 }
@@ -721,6 +730,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .Artical {
+  margin-top: 5vh;
   width: 100%;
 }
 
@@ -793,6 +803,7 @@ a:link, a:visited, a:hover, a:active {
 
 .Artical ul li .postArea .icon {
   margin-top: 5%;
+  z-index: 2;
 }
 
 .Artical ul li .postArea .icon img {
@@ -881,33 +892,62 @@ a:link, a:visited, a:hover, a:active {
   color: inherit;
 }
 
-.postPage h1 {
-  color: crimson;
-  font-size: 2.5em;
-  margin: 1em;
+@media screen and (max-width: 700px) {
+  .postPage button {
+    top: 35vh;
+  }
+}
+
+.postPage h1,
+.postPage h2,
+.postPage h3,
+.postPage h4,
+.postPage h5,
+.postPage h6 {
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
-.postPage h3 {
-  color: #3d3d3d;
-  font-size: 1em;
-  margin: 1em;
-  text-align: center;
+.postPage strong {
+  font-weight: bold;
+}
+
+.postPage p > code:not([class]) {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+.postPage p img {
+  /* 图片居中 */
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.postPage h1 {
+  color: crimson;
+  font-size: 2.5em;
 }
 
 .postPage hr {
   margin: 2rem auto;
 }
 
-.postPage .markdown {
+.postPage #mdContent {
   background: var(--bg);
   color: var(--color-text);
   margin-top: 1rem;
   padding: 2.5rem;
   border-radius: 5px;
   width: 70%;
-  line-height: 2.5rem;
   text-align: left;
+  font-size: 16px;
+  line-height: 2.5em;
 }
 
 .postlist {

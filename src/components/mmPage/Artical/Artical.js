@@ -43,7 +43,7 @@ class Artical extends Component {
       <div className={"Artical"}>
         <ul>
           <Singlepart
-            link={"/posts/ldr1"}
+            link={"/ldr1"}
             imgsrc={
               "http://localhost:5000/api/picture/one/ldr7-1566200714659.jpg"
             }
@@ -51,7 +51,7 @@ class Artical extends Component {
             head2={"Love Death&Robots"}
           />
           <Singlepart
-            link={"/posts/maeatdg1"}
+            link={"/earl1"}
             imgsrc={
               "http://localhost:5000/api/picture/one/meandearlandthedyinggirl-1568199984174.jpg"
             }
@@ -60,7 +60,7 @@ class Artical extends Component {
             head2={"Me and Earl&the dying girl"}
           />
           <Singlepart
-            link={"/posts/maeatdg1"}
+            link={"/boyhood1"}
             imgsrc={
               "http://localhost:5000/api/picture/one/boyhood-1566288713858.jpg"
             }

@@ -18,8 +18,7 @@ class App extends Component {
             <Route path="/" exact component={IntroPage} />
             <Route path="/page" component={mmPage} />
             <Route path="/postlist" component={postlist} />
-            <Route path="/posts/earl1" component={post} />
-            <Route path="/posts/ldr1" component={post} />
+            <Route path="/posts" component={post} />
             <Route component={Notfound} />
           </Switch>
         </div>

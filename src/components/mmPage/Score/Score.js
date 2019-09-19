@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 export default class Score extends Component {
   constructor(props) {
@@ -8,9 +8,9 @@ export default class Score extends Component {
       checked: true
     };
   }
-  componentDidMount(props) {
-    console.log(ReactDOM.findDOMNode(this).querySelectorAll("input")[0]);
-  }
+  // componentDidMount(props) {
+  //   console.log(ReactDOM.findDOMNode(this).querySelectorAll("input")[0]);
+  // }
   render() {
     return (
       <div className="rateArea">
