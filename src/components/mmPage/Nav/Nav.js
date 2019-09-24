@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
   componentDidMount() {
@@ -32,15 +33,18 @@ class Nav extends Component {
         </h1>
         <ul>
           <li>
-            <a href="/page">home</a>
+            <Link to="/page">
+              <p>home</p>
+            </Link>
           </li>
           <li>
-            <a href="/postlist">posts</a>
+            <Link to="/postlist">
+              <p>posts</p>
+            </Link>
           </li>
         </ul>
       </nav>
     );
   }
 }
-
 export default Nav;

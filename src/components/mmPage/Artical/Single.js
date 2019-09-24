@@ -13,7 +13,12 @@ export default class Single extends Component {
           <Link
             to={{ pathname: "/posts", query: { file: `${this.props.link}` } }}
           >
-            <img data-src={this.props.imgsrc} alt="" className="img" />
+            <img
+              data-src={this.props.imgsrc}
+              alt={this.props.head2}
+              title={this.props.head2}
+              className="img"
+            />
           </Link>
         </div>
         <div className="postArea">
@@ -28,8 +33,8 @@ export default class Single extends Component {
             </h2>
           </Link>
           <div className="icon">
-            <img src={short} alt="" />
-            <img src={long} alt="" />
+            <img src={short} alt="" title="see my short comment about it" />
+            <img src={long} alt="" title="see posts about it" />
           </div>
           <audio src={this.props.song}></audio>
         </div>

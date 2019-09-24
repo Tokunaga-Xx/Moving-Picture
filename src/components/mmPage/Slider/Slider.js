@@ -66,8 +66,13 @@ const CoverflowEffect = () => {
             <div className="row1">
               <h1>Boyhood</h1>
               <div className="coverside">
-                <img src={short} alt="" />
-                <img src={long} alt="" onClick={handleClick1} />
+                <img src={short} alt="" title="see my short comment about it" />
+                <img
+                  src={long}
+                  alt=""
+                  title="see posts about it"
+                  onClick={handleClick1}
+                />
               </div>
             </div>
             <div className="row2">
@@ -80,8 +85,13 @@ const CoverflowEffect = () => {
             <div className="row1">
               <h1>Hibana</h1>
               <div className="coverside">
-                <img src={short} alt="" />
-                <img src={long} alt="" onClick={handleClick2} />
+                <img src={short} alt="" title="see my short comment about it" />
+                <img
+                  src={long}
+                  alt=""
+                  title="see posts about it"
+                  onClick={handleClick2}
+                />
               </div>
             </div>
             <div className="row2">
@@ -94,8 +104,13 @@ const CoverflowEffect = () => {
             <div className="row1">
               <h1>Terrace House:Aloha State</h1>
               <div className="coverside">
-                <img src={short} alt="" />
-                <img src={long} alt="" onClick={handleClick3} />
+                <img src={short} alt="" title="see my short comment about it" />
+                <img
+                  src={long}
+                  alt=""
+                  title="see posts about it"
+                  onClick={handleClick3}
+                />
               </div>
             </div>
             <div className="row2">
