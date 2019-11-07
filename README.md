@@ -4,7 +4,7 @@
 
 ## 现状展示
 
-<img src="./src/images/readme.png" width="50%" />
+<img src="./src/images/readme.png" width="70%" />
 
 ## 用到的库
 
