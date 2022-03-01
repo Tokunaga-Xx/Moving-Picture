@@ -2,10 +2,12 @@ import "./App.css"
 
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 
+import React from "react"
+
 // import IntroPage from "./components/Intro/IntroPage"
 // import MovieLog from "./components/MovieLog/MovieLog"
 // import Notfound from "./components/Notfound"
-// import React from "react"
+
 // import post from "./components/MovieLog/posts/post"
 // import postlist from "./components/MovieLog/postList/postList"
 
