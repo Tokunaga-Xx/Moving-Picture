@@ -6,6 +6,7 @@ import short from "../../../images/short1.svg";
 import Score from "../Score/Score";
 import Swal from "sweetalert2";
 
+// TODO: delete swiper
 const CoverflowEffect = () => {
   const handleClick1 = () => {
     Swal.fire({
